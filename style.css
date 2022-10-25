@@ -1,0 +1,61 @@
+* {
+  background-color: black;
+  color: white;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+main {
+  width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#board {
+  width: 1920px;
+  margin: 50px 0 50px 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+#gallows {
+  margin: 10px;
+  padding: 10px;
+  width: 475px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+#alphabet {
+  margin: 10px;
+  padding: 10px;
+  width: 900px;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: calc(100% / 4);
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 7px;
+  margin: 5px;
+  border: 3px solid slateblue;
+  cursor: pointer;
+  border-radius: 25%;
+}
+
+.letter:hover {
+  border: 3px solid white;
+}

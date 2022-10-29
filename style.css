@@ -11,10 +11,10 @@
 }
 
 main {
-  width: 1920px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
 #board {
@@ -25,9 +25,6 @@ main {
 }
 
 #gallows {
-  margin: 10px;
-  padding: 10px;
-  width: 475px;
   text-align: center;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -36,13 +33,14 @@ main {
 #alphabet {
   margin: 10px;
   padding: 10px;
-  width: 900px;
+  width: 1000px;
   height: 350px;
   display: flex;
   flex-wrap: wrap;
   max-width: calc(100% / 4);
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .letter {
@@ -69,4 +67,98 @@ button {
 
 button:hover {
   border: 3px solid white;
+}
+
+@media only screen and (max-width: 1760px) {
+  #alphabet {
+    padding: 0px !important;
+  }
+}
+
+@media only screen and (max-width: 1570px) {
+  #alphabet {
+    max-width: calc(200% / 7);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #alphabet {
+    max-width: calc(300% / 8);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #alphabet {
+    max-width: calc(300% / 6);
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 22px;
+  }
+  #alphabet {
+    max-width: calc(500% / 8);
+  }
+  .letter {
+    width: 40px;
+    height: 40px;
+  }
+  #board {
+    margin: 50px 40px 50px 40px;
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #board {
+    margin: 50px 30px 50px 30px;
+  }
+  img {
+    width: 300px;
+    height: auto;
+  }
+  #alphabet {
+    max-width: calc(500% / 6);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 16px;
+  }
+
+  #alphabet {
+    max-width: calc(500% / 7);
+    height: 200px;
+  }
+
+  .letter {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  main {
+    gap: 0;
+  }
+
+  #board {
+    font-size: 22px;
+    margin: 30px 10px 30px 10px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #alphabet {
+    max-width: calc(700% / 7);
+  }
+  img {
+    width: 200px;
+    height: auto;
+  }
+  .letter {
+    margin: 2px;
+  }
 }

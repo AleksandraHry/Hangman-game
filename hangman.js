@@ -4,15 +4,15 @@ password = password.toUpperCase();
 let lengthPassword = password.length;
 let mistake = 0;
 
-let password1 = "";
+let passwordHidden = "";
 
 for (i = 0; i < lengthPassword; i++) {
-  if (password.charAt(i) == " ") password1 = password1 + " ";
-  else password1 = password1 + "-";
+  if (password.charAt(i) == " ") passwordHidden = passwordHidden + " ";
+  else passwordHidden = passwordHidden + "-";
 }
 
 function writePassword() {
-  document.getElementById("board").innerHTML = password1;
+  document.getElementById("board").innerHTML = passwordHidden;
 }
 
 window.onload = game;
@@ -85,7 +85,7 @@ function check(nr) {
   let hit = false;
   for (i = 0; i < lengthPassword; i++) {
     if (password.charAt(i) == letter[nr]) {
-      password1 = password1.setSign(i, letter[nr]);
+      passwordHidden = passwordHidden.setSign(i, letter[nr]);
       hit = true;
     }
   }
@@ -119,7 +119,7 @@ function check(nr) {
       '<button class="reset" onclick="location.reload()">JESZCZE RAZ?</button>';
   }
 
-  if (password == password1) {
+  if (password == passwordHidden) {
     document.getElementById("alphabet").innerHTML =
       "Podano prawidłowe hasło" +
       '<button class="reset" onclick="location.reload()">JESZCZE RAZ?</button>';
